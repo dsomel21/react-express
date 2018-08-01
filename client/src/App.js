@@ -4,8 +4,8 @@ import './App.css';
 
 class App extends Component {
   
-  const state = {
-    user: []
+  state = {
+    users: []
   }
 
   componentDidMount() {
@@ -20,7 +20,7 @@ class App extends Component {
         <h1>Users</h1>
         <ul>
           {this.state.users.map(user =>
-            <li key={user.id}></li>
+            <li key={user.id}>{user.username}</li>
           )}
         </ul>
       </div>
